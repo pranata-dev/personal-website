@@ -10,34 +10,52 @@ export const dynamic = 'force-dynamic';
 
 // Sample posts for fallback - Add your articles here with full content
 const samplePosts: Record<string, BlogPost> = {
-    'anime-review-2024': {
+    'review-akira-1988': {
         id: '1',
-        title: 'Review: My Favorite Anime of the Season',
-        slug: 'anime-review-2024',
-        excerpt: 'A deep dive into the storytelling, animation, and character development of the latest hit anime series. Originally published on Medium.',
+        title: 'Neo-Tokyo Cyberpunk in 1988: Menyusuri Distopia, Delusi dan Detonasi Diri dalam Akira (1988)',
+        slug: 'review-akira-1988',
+        excerpt: 'Apakah lo termasuk orang-orang yang gemar menonton film-film sci-fi, dystopia, cyberpunk semacam The Matrix, Inception atau mungkin main game Cyberpunk 2077? Kalo iya, lo bakal suka dan terkesima dengan film anime yang satu ini, Akira.',
         category: 'reviews',
-        content: `# Review: My Favorite Anime of the Season
+        content: `Apakah lo termasuk orang-orang yang gemar menonton film-film sci-fi, dystopia, cyberpunk semacam The Matrix, Inception atau mungkin main game Cyberpunk 2077? Kalo iya, lo bakal suka dan terkesima dengan film anime yang satu ini, Akira.
 
-*Originally published on [Medium](https://medium.com/@pranata26) by Dzulfikar Yudha Pranata.*
+![Cover Film Akira (1988)](https://m.media-amazon.com/images/M/MV5BNjFmNWYzZjMtYWIyZi00NDVmLWIxY2EtN2RiMjZiMDk4MzcyXkEyXkFqcGdeQXVyMTg2NjYzOA@@._V1_.jpg)
+*Cover Film Akira (1988)*
 
-## Introduction
+Anime ini berlatar di tahun 2019 di kota futuristik Neo Tokyo yang dikisahkan pada tahun 1988 terjadi perang nuklir yang memporak-porandakan kota tersebut. Namun, pada 2019, kota itu berubah menjadi kota yang sangat futuristik namun sangat liar dan memiliki tingkat kriminalitas yang sangat tinggi. Ketika film baru dimulai, lo akan disuguhi pemandangan-pemandangan kota Neo Tokyo yang futuristik dengan billboard neon di mana-mana, geng motor, dan gang-gang kecil yang berada di antara gedung-gedung tinggi ala-ala film distopia.
 
-Here is where you can paste your introduction from your Medium article. Talk about what drew you to this anime and your initial impressions.
+Lo bakal langsung ngerasa kaya lagi diajak berkunjung ke tempat yang chaotic, brutal, tapi juga futuristik. Tidak lupa juga, di awal-awal film lo akan disuguhi dengan motor main character di film itu, Shotaro Kaneda, yang terlihat sangat futuristik dan ngebuat lo pengen punya motor kaya gitu di saat itu juga. Tidak lupa juga di awal film lo akan dikenali dengan geng motor yang dipimpin oleh Kaneda, The Capsules, yang nantinya bakal ngajarin lo tentang loyalitas dan pengkhianatan, serta kekuasaan dan kehancuran.
 
-## Plot Analysis
+Tapi dibalik itu semua, tentu saja lo gak akan terlewat dengan yang namanya kekuasaan tanpa kontrol, demonstrasi, eksperimen manusia, kebebasan semu, dan pemerintah yang korup. Oh, gua hampir lupa, satu lagi yang perlu lo pahami adalah film ini menyajikan visual yang sangat menakjubkan padahal dirilis di tahun 1988. 37 Tahun yang lalu, bray!
 
-Paste your analysis of the plot here. How does the story progress? What are the key themes?
+![Motor Shotaro Kaneda yang melegenda](https://features.japantimes.co.jp/wp-content/uploads/2018/07/kaneda-bike.jpg)
+*Motor Shotaro Kaneda yang melegenda*
 
-## Animation & Sound
+![Neo-Tokyo](https://th.bing.com/th/id/OIP.djsBINC160igU3yRt6j_eQHaEK?w=319&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3)
+*Neo-Tokyo*
 
-Describe the visual style and sound design. Does the animation hold up during action scenes? How is the soundtrack?
+Di film ini lo akan dikenali dengan salah seorang teman Kaneda yaitu Tetsuo. Biar lo kebayang Tetsuo itu kaya gimana orangnya, bayangin aja temen lo ini yang selalu dibully saat kecil, disuruh-suruh ama teman-teman di atasnya, dan bukan seorang yang “pentolan” di gengnya. Intinya, Tetsuo tuh kaya anak-anak gen z jaman sekarang yang overwhelmed banget dengan keadaan dan kena pressure dari segala arah.
 
-## Conclusion
+Sekarang bayangin gimana jadinya kalau orang seperti itu dikasih power yang sangat besar secara tiba-tiba? Yap, dia berubah dari yang tadinya orang yang pengen dihargai menjadi seseorang yang punya kekuatan setengah dewa. Gua engga melebih-lebihkan ketika nulis Tetsuo menjadi seseorang yang tiba-tiba menjadi punya kekuatan setengah dewa, karena benar-benar sebesar itu kekuatan dia. Kalau lo mengira film ini cuma sekedar cerita geng motor anak sekolahan biasa di masa depan yang distopia, lo salah besar. Film ini lebih dari itu. Film ini secara gamblang menceritakan bagaimana masa depan se-chaotic itu. Eksperimen manusia dilakukan secara diam-diam, kehancuran identitas manusia, pencarian makna dalam kekacauan, serta demonstrasi dan kekuasaan tanpa kontrol.
 
-Your final verdict. Is it a must-watch?
+![Kaneda](https://th.bing.com/th/id/OIP.08JQ5-PR7i7ZyttfnjEdCwHaD_?w=311&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3)
+*Kaneda*
 
-[Read the full original article on my Medium profile →](https://medium.com/@pranata26)
-        `,
+Di sini, lo gak bakal disuapin moral of the story dari filmnya. Nonton film Akira tuh kaya lo ngedengerin orang dari masa depan yang tiba-tiba aja dateng ke depan rumah/kost lu dan ngajakin lo ngobrol di tengah malam. Obrolannya abstrak, kadang juga ngebuat lo bingung, “Ini orang ngomongin apaan, sih?”. Tapi, obrolan yang keluar dari mulut dia tuh ibarat potongan puzzle tentang kenyataan masa depan yang benar-benar harus lo susun satu per satu.
+
+Jadi, kalo lo terbiasa nonton anime shonen yang villain atau mc nya ceramah panjang lebar tentang kehidupan, sorry to say, lo bakal sedikit bingung di sini. Tapi, kalo lo seneng dengan film-film yang ngebuat lo selama nonton mikir kek, “Ini maksudnya apaan ya?” atau “Ini ngomongin apaan, sih?” dan setelah itu lo cari tahu tentang film ini di reddit atau forum anime lainnya, lo cocok buat nonton film ini.
+
+Soundtrack dari film ini? Untuk sebuah film anime yang rilis di tahun 1988 dan dengan tema cyberpunk nya, jujur aja soundtrack nya benar-benar memukau. Kalau lu dengar selama nonton film ini mungkin biasa aja, tapi bagi gua soundtrack nya tuh ngeri, asli. Ngeri bukan karena akan ada adegan horor atau jumpscare, tapi lebih ke ngebuat sadar gimana rapuhnya eksistensial manusia di tengah teknologi yang sangat maju dan kekuasaan yang dikuasai oleh pemerintah.
+
+Film anime Akira gua akuin memang bukan buat semua orang. Dengan banyaknya adegan-adegan yang intens secara visual, penuh dengan konflik, pacing yang cukup lompat-lompat ngebuat gak semua orang tahan dengan film seperti ini. Tapi, kalo lo cari tontonan anime baru karena bosan dengan anime-anime belakangan ini, lo wajib banget buat nonton Akira.
+
+## Verdict:
+Akira tuh kaya mixtape post-apocalypse yang disampaikan dalam bentuk lukisan hidup. Lo nonton anime ini bukan buat paham, tapi buat ngerasain gimana ngerinya kalau teknologi berkembang sangat jauh dan lo hidup di masa distopia.
+
+**Rating? Solid 9.5/10.**
+
+---
+**Tags:** Anime, Anime Review, Akira, Japanese Culture, Japan
+`,
         published: true,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
