@@ -1,9 +1,11 @@
 -- Supabase Schema for Portfolio Website
 -- Run this in your Supabase SQL Editor
 
--- Create category type
--- Categories: tech-ai, reviews, short-stories, culture
+-- Create category types
+-- Blog Categories: tech-ai, reviews, short-stories, culture
 CREATE TYPE blog_category AS ENUM ('tech-ai', 'reviews', 'short-stories', 'culture');
+-- Project Categories: ai-ml, web-dev, automation, data-analytics
+CREATE TYPE project_category AS ENUM ('ai-ml', 'web-dev', 'automation', 'data-analytics');
 
 -- Projects table
 CREATE TABLE IF NOT EXISTS projects (
@@ -11,6 +13,7 @@ CREATE TABLE IF NOT EXISTS projects (
   title TEXT NOT NULL,
   description TEXT,
   tech_stack TEXT[] DEFAULT '{}',
+  category TEXT DEFAULT 'web-dev',
   github_url TEXT,
   demo_url TEXT,
   image_url TEXT,
@@ -61,13 +64,15 @@ CREATE POLICY "Public can submit contact" ON contact_submissions
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_blog_posts_slug ON blog_posts(slug);
 CREATE INDEX IF NOT EXISTS idx_blog_posts_category ON blog_posts(category);
+CREATE INDEX IF NOT EXISTS idx_projects_category ON projects(category);
 CREATE INDEX IF NOT EXISTS idx_projects_featured ON projects(featured);
 
 -- Sample data for testing (optional)
-INSERT INTO projects (title, description, tech_stack, github_url, featured) VALUES
-  ('AI Research Assistant', 'A machine learning powered research tool for physics papers', ARRAY['Python', 'TensorFlow', 'FastAPI', 'React'], 'https://github.com/username/ai-research', true),
-  ('Automation Pipeline', 'End-to-end automation for data processing workflows', ARRAY['Python', 'Apache Airflow', 'Docker'], 'https://github.com/username/automation', true),
-  ('Neural Network Visualizer', 'Interactive visualization tool for deep learning models', ARRAY['TypeScript', 'D3.js', 'Next.js'], 'https://github.com/username/nn-viz', false);
+-- Sample data for testing (optional)
+INSERT INTO projects (title, description, tech_stack, category, github_url, featured) VALUES
+  ('AI Research Assistant', 'A machine learning powered research tool for physics papers', ARRAY['Python', 'TensorFlow', 'FastAPI', 'React'], 'ai-ml', 'https://github.com/pranata-dev/ai-research', true),
+  ('Automation Pipeline', 'End-to-end automation for data processing workflows', ARRAY['Python', 'Apache Airflow', 'Docker'], 'automation', 'https://github.com/pranata-dev/automation', true),
+  ('Neural Network Visualizer', 'Interactive visualization tool for deep learning models', ARRAY['TypeScript', 'D3.js', 'Next.js'], 'ai-ml', 'https://github.com/pranata-dev/nn-viz', false);
 
 INSERT INTO blog_posts (title, slug, excerpt, content, category, published) VALUES
   ('Getting Started with ML in Physics Research', 'ml-physics-intro', 'An introduction to applying machine learning techniques in physics research.', '# Getting Started with ML...', 'tech-ai', true),

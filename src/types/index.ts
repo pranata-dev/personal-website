@@ -1,10 +1,20 @@
 // Type definitions for Portfolio Website
 
+export type ProjectCategory = 'ai-ml' | 'web-dev' | 'automation' | 'data-analytics';
+
+export const PROJECT_CATEGORIES: { value: ProjectCategory; label: string }[] = [
+    { value: 'ai-ml', label: 'AI & Machine Learning' },
+    { value: 'web-dev', label: 'Web Development' },
+    { value: 'automation', label: 'Automation & Tools' },
+    { value: 'data-analytics', label: 'Data Analytics' },
+];
+
 export interface Project {
     id: string;
     title: string;
     description: string | null;
     tech_stack: string[];
+    category: ProjectCategory;
     github_url: string | null;
     demo_url: string | null;
     image_url: string | null;

@@ -65,6 +65,12 @@ export const en = {
         subtitle: "A selection of projects I've worked on, from AI research tools to automation systems.",
         viewCode: 'Code',
         viewDemo: 'Demo',
+        categories: {
+            'ai-ml': 'AI & Machine Learning',
+            'web-dev': 'Web Development',
+            'automation': 'Automation & Tools',
+            'data-analytics': 'Data Analytics',
+        },
     },
 
     // Experience Page

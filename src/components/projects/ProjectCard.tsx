@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import { Project } from '@/types';
+import { ExternalLink, Github, Folder } from 'lucide-react';
+import { Project, ProjectCategory, PROJECT_CATEGORIES } from '@/types';
 import { Card } from '@/components/ui/Card';
 import { useLocale } from '@/context/LocaleContext';
 
@@ -11,8 +11,19 @@ interface ProjectCardProps {
     index: number;
 }
 
+const categoryColors: Record<ProjectCategory, string> = {
+    'ai-ml': 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300',
+    'web-dev': 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300',
+    'automation': 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300',
+    'data-analytics': 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300',
+};
+
 export function ProjectCard({ project, index }: ProjectCardProps) {
     const { t } = useLocale();
+
+    const categoryLabel = t.projects.categories[project.category] ||
+        PROJECT_CATEGORIES.find(c => c.value === project.category)?.label ||
+        project.category;
 
     return (
         <motion.div
@@ -32,6 +43,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         />
                     </div>
                 )}
+
+                {/* Category Badge */}
+                <div className="mb-3">
+                    <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${categoryColors[project.category]}`}>
+                        <Folder className="w-3 h-3" />
+                        {categoryLabel}
+                    </span>
+                </div>
 
                 {/* Content */}
                 <div className="flex-1 space-y-3">

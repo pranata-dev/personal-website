@@ -67,6 +67,12 @@ export const id: Translations = {
         subtitle: 'Koleksi proyek yang udah gue kerjain, dari AI research tools sampe automation systems.',
         viewCode: 'Kode',
         viewDemo: 'Demo',
+        categories: {
+            'ai-ml': 'AI & Machine Learning',
+            'web-dev': 'Web Development',
+            'automation': 'Automation & Tools',
+            'data-analytics': 'Data Analytics',
+        },
     },
 
     // Experience Page
