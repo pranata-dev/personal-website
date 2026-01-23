@@ -2,7 +2,7 @@
 
 A modern, high-performance personal website and blog built with the latest web technologies. Designed to showcase projects, share thoughts via a blog, and highlight technical skills with a clean, responsive UI.
 
-![Project Preview](public/window.svg) ## Features
+Features
 
 * **Bleeding Edge Tech**: Built with **Next.js 16.1** and **React 19**.
 * **Zero-Config Styling**: Utilizes **Tailwind CSS v4** for lightning-fast styling without complex config files.
