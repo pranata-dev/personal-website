@@ -70,9 +70,11 @@ CREATE INDEX IF NOT EXISTS idx_projects_featured ON projects(featured);
 -- Sample data for testing (optional)
 -- Sample data for testing (optional)
 INSERT INTO projects (title, description, tech_stack, category, github_url, featured) VALUES
-  ('AI Research Assistant', 'A machine learning powered research tool for physics papers', ARRAY['Python', 'TensorFlow', 'FastAPI', 'React'], 'ai-ml', 'https://github.com/pranata-dev/ai-research', true),
-  ('Automation Pipeline', 'End-to-end automation for data processing workflows', ARRAY['Python', 'Apache Airflow', 'Docker'], 'automation', 'https://github.com/pranata-dev/automation', true),
-  ('Neural Network Visualizer', 'Interactive visualization tool for deep learning models', ARRAY['TypeScript', 'D3.js', 'Next.js'], 'ai-ml', 'https://github.com/pranata-dev/nn-viz', false);
+  ('Neural Network for Astrophysics Research', 'Final Year Project: Stellar age prediction and phase classification using Transformer and MLP Models on Gaia Data Release 3.', ARRAY['Python', 'PyTorch', 'Transformer', 'Pandas'], 'ai-ml', 'https://github.com/pranata-dev/stellar-evolution', true),
+  ('N8N Job Vacancy Automation', 'Automated Job Vacancy Tracker using n8n, Jina AI, & Telegram Bot. Features duplicate checking, CAPTCHA fallback, and AI-powered parsing.', ARRAY['n8n', 'Jina AI', 'Telegram API', 'JavaScript'], 'automation', 'https://github.com/pranata-dev/n8n-job-vacancy-automation', true),
+  ('N8N Receipt Scanner', 'An automated receipt scanning workflow built with n8n that extracts structured data from receipt images using AI-powered OCR and document understanding.', ARRAY['n8n', 'OCR', 'AI', 'JSON'], 'automation', 'https://github.com/pranata-dev/n8n-receipt-scanning', false),
+  ('Smartband Health Monitoring', 'ESP32-based IoT system monitoring Heart Rate, SpO2, and Temp via Blynk. Integrates Hugging Face AI to provide automated medical advice when vitals are abnormal.', ARRAY['C++', 'ESP32', 'Blynk', 'Hugging Face'], 'automation', 'https://github.com/pranata-dev/smartband-healt-monitoring-iot', true),
+  ('Personal Website Branding', 'Modern Personal Portfolio built with Next.js 16 (App Router), React 19, & Tailwind CSS v4. Features bilingual support (i18n), dark mode, and a hybrid blog system.', ARRAY['Next.js 16', 'React 19', 'Tailwind CSS v4', 'Supabase'], 'web-dev', 'https://github.com/pranata-dev/personal-website', true);
 
 INSERT INTO blog_posts (title, slug, excerpt, content, category, published) VALUES
   ('Getting Started with ML in Physics Research', 'ml-physics-intro', 'An introduction to applying machine learning techniques in physics research.', '# Getting Started with ML...', 'tech-ai', true),
