@@ -18,6 +18,13 @@ export default function ExperiencePage() {
 
     const experiences: Experience[] = [
         {
+            title: 'AI Engineer',
+            organization: 'Lumora Labs',
+            period: 'January 2026 - Present',
+            description: 'Developing and maintaining AI models for various applications. Collaborating with cross-functional teams to design and implement AI solutions.',
+            type: 'freelance',
+        },
+        {
             title: 'Sensor and Transducer Laboratory Assistant',
             organization: 'Department of Physics, IPB University',
             period: 'August 2025 - December 2025',
