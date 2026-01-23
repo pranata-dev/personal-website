@@ -51,7 +51,8 @@ Film anime Akira gua akuin memang bukan buat semua orang. Dengan banyaknya adega
 ## Verdict:
 Akira tuh kaya mixtape post-apocalypse yang disampaikan dalam bentuk lukisan hidup. Lo nonton anime ini bukan buat paham, tapi buat ngerasain gimana ngerinya kalau teknologi berkembang sangat jauh dan lo hidup di masa distopia.
 
-**Rating? Solid 9.5/10.**
+
+Rating? Solid 9.5/10.
 
 ---
 **Tags:** Anime, Anime Review, Akira, Japanese Culture, Japan
@@ -187,6 +188,26 @@ export default async function BlogPostPage({
                                 </li>
                             ))}
                         </ul>
+                    );
+                }
+
+                // Images
+                if (paragraph.startsWith('![') && paragraph.includes('](') && paragraph.endsWith(')')) {
+                    const alt = paragraph.substring(2, paragraph.indexOf(']'));
+                    const src = paragraph.substring(paragraph.indexOf('](') + 2, paragraph.length - 1);
+                    return (
+                        <div key={index} className="my-8">
+                            <img
+                                src={src}
+                                alt={alt}
+                                className="w-full rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-800"
+                            />
+                            {alt && (
+                                <p className="text-sm text-center text-neutral-500 mt-2 italic">
+                                    {alt}
+                                </p>
+                            )}
+                        </div>
                     );
                 }
 
