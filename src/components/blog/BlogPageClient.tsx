@@ -11,9 +11,9 @@ import { useLocale } from '@/context/LocaleContext';
 const samplePosts: BlogPost[] = [
     {
         id: '1',
-        title: 'Review: My Favorite Anime of the Season',
-        slug: 'anime-review-2024',
-        excerpt: 'A deep dive into the storytelling, animation, and character development of the latest hit anime series. Originally published on Medium.',
+        title: 'Neo-Tokyo Cyberpunk in 1988: Menyusuri Distopia, Delusi dan Detonasi Diri dalam Akira (1988)',
+        slug: 'review-akira-1988',
+        excerpt: 'Apakah lo termasuk orang-orang yang gemar menonton film-film sci-fi, dystopia, cyberpunk semacam The Matrix, Inception atau mungkin main game Cyberpunk 2077? Kalo iya, lo bakal suka dan terkesima dengan film anime yang satu ini, Akira.',
         content: '', // Content is loaded in [slug]/page.tsx
         category: 'reviews',
         published: true,
