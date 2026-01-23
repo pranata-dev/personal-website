@@ -20,8 +20,8 @@ const samplePosts: Record<string, BlogPost> = {
         category: 'reviews',
         content: `Apakah lo termasuk orang-orang yang gemar menonton film-film sci-fi, dystopia, cyberpunk semacam The Matrix, Inception atau mungkin main game Cyberpunk 2077? Kalo iya, lo bakal suka dan terkesima dengan film anime yang satu ini, Akira.
 
+
 ![Cover Film Akira (1988)](https://m.media-amazon.com/images/M/MV5BNjFmNWYzZjMtYWIyZi00NDVmLWIxY2EtN2RiMjZiMDk4MzcyXkEyXkFqcGdeQXVyMTg2NjYzOA@@._V1_.jpg)
-*Cover Film Akira (1988)*
 
 Anime ini berlatar di tahun 2019 di kota futuristik Neo Tokyo yang dikisahkan pada tahun 1988 terjadi perang nuklir yang memporak-porandakan kota tersebut. Namun, pada 2019, kota itu berubah menjadi kota yang sangat futuristik namun sangat liar dan memiliki tingkat kriminalitas yang sangat tinggi. Ketika film baru dimulai, lo akan disuguhi pemandangan-pemandangan kota Neo Tokyo yang futuristik dengan billboard neon di mana-mana, geng motor, dan gang-gang kecil yang berada di antara gedung-gedung tinggi ala-ala film distopia.
 
@@ -30,17 +30,14 @@ Lo bakal langsung ngerasa kaya lagi diajak berkunjung ke tempat yang chaotic, br
 Tapi dibalik itu semua, tentu saja lo gak akan terlewat dengan yang namanya kekuasaan tanpa kontrol, demonstrasi, eksperimen manusia, kebebasan semu, dan pemerintah yang korup. Oh, gua hampir lupa, satu lagi yang perlu lo pahami adalah film ini menyajikan visual yang sangat menakjubkan padahal dirilis di tahun 1988. 37 Tahun yang lalu, bray!
 
 ![Motor Shotaro Kaneda yang melegenda](https://features.japantimes.co.jp/wp-content/uploads/2018/07/kaneda-bike.jpg)
-*Motor Shotaro Kaneda yang melegenda*
 
 ![Neo-Tokyo](https://th.bing.com/th/id/OIP.djsBINC160igU3yRt6j_eQHaEK?w=319&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3)
-*Neo-Tokyo*
 
 Di film ini lo akan dikenali dengan salah seorang teman Kaneda yaitu Tetsuo. Biar lo kebayang Tetsuo itu kaya gimana orangnya, bayangin aja temen lo ini yang selalu dibully saat kecil, disuruh-suruh ama teman-teman di atasnya, dan bukan seorang yang “pentolan” di gengnya. Intinya, Tetsuo tuh kaya anak-anak gen z jaman sekarang yang overwhelmed banget dengan keadaan dan kena pressure dari segala arah.
 
 Sekarang bayangin gimana jadinya kalau orang seperti itu dikasih power yang sangat besar secara tiba-tiba? Yap, dia berubah dari yang tadinya orang yang pengen dihargai menjadi seseorang yang punya kekuatan setengah dewa. Gua engga melebih-lebihkan ketika nulis Tetsuo menjadi seseorang yang tiba-tiba menjadi punya kekuatan setengah dewa, karena benar-benar sebesar itu kekuatan dia. Kalau lo mengira film ini cuma sekedar cerita geng motor anak sekolahan biasa di masa depan yang distopia, lo salah besar. Film ini lebih dari itu. Film ini secara gamblang menceritakan bagaimana masa depan se-chaotic itu. Eksperimen manusia dilakukan secara diam-diam, kehancuran identitas manusia, pencarian makna dalam kekacauan, serta demonstrasi dan kekuasaan tanpa kontrol.
 
-![Kaneda](https://th.bing.com/th/id/OIP.08JQ5-PR7i7ZyttfnjEdCwHaD_?w=311&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3)
-*Kaneda*
+![Tetsuo](https://th.bing.com/th/id/OIP.08JQ5-PR7i7ZyttfnjEdCwHaD_?w=311&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3)
 
 Di sini, lo gak bakal disuapin moral of the story dari filmnya. Nonton film Akira tuh kaya lo ngedengerin orang dari masa depan yang tiba-tiba aja dateng ke depan rumah/kost lu dan ngajakin lo ngobrol di tengah malam. Obrolannya abstrak, kadang juga ngebuat lo bingung, “Ini orang ngomongin apaan, sih?”. Tapi, obrolan yang keluar dari mulut dia tuh ibarat potongan puzzle tentang kenyataan masa depan yang benar-benar harus lo susun satu per satu.
 
