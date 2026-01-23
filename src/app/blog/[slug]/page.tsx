@@ -4,6 +4,8 @@ import { supabase } from '@/lib/supabase';
 import { BlogPost, BlogCategory, BLOG_CATEGORIES } from '@/types';
 import { Calendar, ArrowLeft, Tag } from 'lucide-react';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 // Force dynamic rendering for Supabase data
 export const dynamic = 'force-dynamic';
@@ -126,107 +128,6 @@ export default async function BlogPostPage({
 
     const categoryLabel = BLOG_CATEGORIES.find(c => c.value === post.category)?.label || post.category;
 
-    // Simple markdown-like rendering
-    const renderContent = (content: string) => {
-        return content
-            .split('\n\n')
-            .map((paragraph, index) => {
-                // Headers
-                if (paragraph.startsWith('# ')) {
-                    return (
-                        <h1 key={index} className="text-3xl md:text-4xl font-bold mb-6">
-                            {paragraph.slice(2)}
-                        </h1>
-                    );
-                }
-                if (paragraph.startsWith('## ')) {
-                    return (
-                        <h2 key={index} className="text-2xl md:text-3xl font-bold mt-12 mb-4">
-                            {paragraph.slice(3)}
-                        </h2>
-                    );
-                }
-                if (paragraph.startsWith('### ')) {
-                    return (
-                        <h3 key={index} className="text-xl md:text-2xl font-bold mt-8 mb-3">
-                            {paragraph.slice(4)}
-                        </h3>
-                    );
-                }
-
-                // Italics for story text
-                if (paragraph.startsWith('*') && paragraph.endsWith('*') && !paragraph.startsWith('**')) {
-                    return (
-                        <p key={index} className="text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed italic">
-                            {paragraph.slice(1, -1)}
-                        </p>
-                    );
-                }
-
-                // Lists
-                if (paragraph.includes('\n1. ') || paragraph.startsWith('1. ')) {
-                    const items = paragraph.split('\n').filter((line) => line.match(/^\d+\. /));
-                    return (
-                        <ol key={index} className="list-decimal pl-6 space-y-2 mb-4">
-                            {items.map((item, i) => (
-                                <li key={i} className="text-neutral-600 dark:text-neutral-400">
-                                    {item.replace(/^\d+\. /, '')}
-                                </li>
-                            ))}
-                        </ol>
-                    );
-                }
-
-                if (paragraph.includes('\n- ') || paragraph.startsWith('- ')) {
-                    const items = paragraph.split('\n').filter((line) => line.startsWith('- '));
-                    return (
-                        <ul key={index} className="list-disc pl-6 space-y-2 mb-4">
-                            {items.map((item, i) => (
-                                <li key={i} className="text-neutral-600 dark:text-neutral-400">
-                                    {item.slice(2)}
-                                </li>
-                            ))}
-                        </ul>
-                    );
-                }
-
-                // Images
-                if (paragraph.startsWith('![') && paragraph.endsWith(')')) {
-                    const altStartIndex = paragraph.indexOf('[') + 1;
-                    const altEndIndex = paragraph.indexOf(']');
-                    const srcStartIndex = paragraph.indexOf('(') + 1;
-                    const srcEndIndex = paragraph.length - 1;
-
-                    const alt = paragraph.substring(altStartIndex, altEndIndex);
-                    const src = paragraph.substring(srcStartIndex, srcEndIndex);
-
-                    return (
-                        <img
-                            key={index}
-                            src={src}
-                            alt={alt}
-                            className="w-full h-auto rounded-lg shadow-md my-6"
-                        />
-                    );
-                }
-
-                // Regular paragraph
-                return (
-                    <p key={index} className="text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
-                        {paragraph.split('**').map((part, i) =>
-                            i % 2 === 1 ? (
-                                <strong key={i} className="font-semibold text-neutral-800 dark:text-neutral-200">
-                                    {part}
-                                </strong>
-                            ) : (
-                                part
-                            )
-                        )}
-                    </p>
-                );
-            });
-    };
-
     return (
         <div className="pt-24 pb-16">
             <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -257,7 +158,38 @@ export default async function BlogPostPage({
                 </header>
 
                 {/* Content */}
-                <div className="prose">{post.content && renderContent(post.content)}</div>
+                <div className="prose dark:prose-invert max-w-none">
+                    <ReactMarkdown
+                        rehypePlugins={[rehypeRaw]}
+                        components={{
+                            img: ({ node, ...props }: any) => (
+                                <div className="my-8 flex flex-col items-center">
+                                    <img
+                                        {...props}
+                                        className="w-full h-auto rounded-lg shadow-md mb-2"
+                                        alt={props.alt || ''}
+                                    />
+                                    {props.alt && (
+                                        <p className="text-sm text-center text-neutral-500 italic m-0">
+                                            {props.alt}
+                                        </p>
+                                    )}
+                                </div>
+                            ),
+                            h1: ({ node, ...props }: any) => <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8" {...props} />,
+                            h2: ({ node, ...props }: any) => <h2 className="text-2xl md:text-3xl font-bold mt-12 mb-4" {...props} />,
+                            h3: ({ node, ...props }: any) => <h3 className="text-xl md:text-2xl font-bold mt-8 mb-3" {...props} />,
+                            p: ({ node, ...props }: any) => <p className="text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed" {...props} />,
+                            ul: ({ node, ...props }: any) => <ul className="list-disc pl-6 space-y-2 mb-4 text-neutral-600 dark:text-neutral-400" {...props} />,
+                            ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 space-y-2 mb-4 text-neutral-600 dark:text-neutral-400" {...props} />,
+                            a: ({ node, ...props }: any) => <a className="text-blue-600 dark:text-blue-400 hover:underline" {...props} />,
+                            strong: ({ node, ...props }: any) => <strong className="font-semibold text-neutral-800 dark:text-neutral-200" {...props} />,
+                            em: ({ node, ...props }: any) => <em className="italic text-neutral-600 dark:text-neutral-400" {...props} />,
+                        }}
+                    >
+                        {post.content || ''}
+                    </ReactMarkdown>
+                </div>
             </article>
         </div>
     );
