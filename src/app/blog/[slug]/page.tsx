@@ -10,24 +10,38 @@ export const dynamic = 'force-dynamic';
 
 // Sample posts for fallback - Add your articles here with full content
 const samplePosts: Record<string, BlogPost> = {
-    // To add a new article, copy this template:
-    // 'your-article-slug': {
-    //   id: '1',
-    //   title: 'Your Article Title',
-    //   slug: 'your-article-slug',
-    //   excerpt: 'A short description...',
-    //   category: 'tech-ai',
-    //   content: `# Your Article Title
-    //
-    // Your article content in markdown format here.
-    //
-    // ## Section Heading
-    // Some content...
-    // `,
-    //   published: true,
-    //   created_at: new Date().toISOString(),
-    //   updated_at: new Date().toISOString(),
-    // },
+    'anime-review-2024': {
+        id: '1',
+        title: 'Review: My Favorite Anime of the Season',
+        slug: 'anime-review-2024',
+        excerpt: 'A deep dive into the storytelling, animation, and character development of the latest hit anime series. Originally published on Medium.',
+        category: 'reviews',
+        content: `# Review: My Favorite Anime of the Season
+
+*Originally published on [Medium](https://medium.com/@pranata26) by Dzulfikar Yudha Pranata.*
+
+## Introduction
+
+Here is where you can paste your introduction from your Medium article. Talk about what drew you to this anime and your initial impressions.
+
+## Plot Analysis
+
+Paste your analysis of the plot here. How does the story progress? What are the key themes?
+
+## Animation & Sound
+
+Describe the visual style and sound design. Does the animation hold up during action scenes? How is the soundtrack?
+
+## Conclusion
+
+Your final verdict. Is it a must-watch?
+
+[Read the full original article on my Medium profile →](https://medium.com/@pranata26)
+        `,
+        published: true,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+    },
 };
 
 const categoryColors: Record<BlogCategory, string> = {

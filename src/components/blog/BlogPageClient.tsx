@@ -9,18 +9,17 @@ import { useLocale } from '@/context/LocaleContext';
 
 // Empty sample posts - add your articles here or use Supabase
 const samplePosts: BlogPost[] = [
-    // To add a new article, copy this template and fill in your content:
-    // {
-    //   id: '1',
-    //   title: 'Your Article Title',
-    //   slug: 'your-article-slug',
-    //   excerpt: 'A short description of your article...',
-    //   content: '',
-    //   category: 'tech-ai', // Options: 'tech-ai', 'reviews', 'short-stories', 'culture'
-    //   published: true,
-    //   created_at: new Date().toISOString(),
-    //   updated_at: new Date().toISOString(),
-    // },
+    {
+        id: '1',
+        title: 'Review: My Favorite Anime of the Season',
+        slug: 'anime-review-2024',
+        excerpt: 'A deep dive into the storytelling, animation, and character development of the latest hit anime series. Originally published on Medium.',
+        content: '', // Content is loaded in [slug]/page.tsx
+        category: 'reviews',
+        published: true,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+    },
 ];
 
 interface BlogPageClientProps {
@@ -48,8 +47,8 @@ export default function BlogPageClient({ initialPosts }: BlogPageClientProps) {
                     <button
                         onClick={() => setSelectedCategory('all')}
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedCategory === 'all'
-                                ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900'
-                                : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
+                            ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900'
+                            : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
                             }`}
                     >
                         {t.blog.allCategories}
@@ -59,8 +58,8 @@ export default function BlogPageClient({ initialPosts }: BlogPageClientProps) {
                             key={category.value}
                             onClick={() => setSelectedCategory(category.value)}
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedCategory === category.value
-                                    ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900'
-                                    : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
+                                ? 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900'
+                                : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700'
                                 }`}
                         >
                             {getCategoryLabel(category.value)}
