@@ -48,13 +48,12 @@ Soundtrack dari film ini? Untuk sebuah film anime yang rilis di tahun 1988 dan d
 
 Film anime Akira gua akuin memang bukan buat semua orang. Dengan banyaknya adegan-adegan yang intens secara visual, penuh dengan konflik, pacing yang cukup lompat-lompat ngebuat gak semua orang tahan dengan film seperti ini. Tapi, kalo lo cari tontonan anime baru karena bosan dengan anime-anime belakangan ini, lo wajib banget buat nonton Akira.
 
-## Verdict:
-Akira tuh kaya mixtape post-apocalypse yang disampaikan dalam bentuk lukisan hidup. Lo nonton anime ini bukan buat paham, tapi buat ngerasain gimana ngerinya kalau teknologi berkembang sangat jauh dan lo hidup di masa distopia.
 
+Verdict:
+Akira tuh kaya mixtape post-apocalypse yang disampaikan dalam bentuk lukisan hidup. Lo nonton anime ini bukan buat paham, tapi buat ngerasain gimana ngerinya kalau teknologi berkembang sangat jauh dan lo hidup di masa distopia.
 
 Rating? Solid 9.5/10.
 
----
 **Tags:** Anime, Anime Review, Akira, Japanese Culture, Japan
 `,
         published: true,
@@ -192,22 +191,22 @@ export default async function BlogPostPage({
                 }
 
                 // Images
-                if (paragraph.startsWith('![') && paragraph.includes('](') && paragraph.endsWith(')')) {
-                    const alt = paragraph.substring(2, paragraph.indexOf(']'));
-                    const src = paragraph.substring(paragraph.indexOf('](') + 2, paragraph.length - 1);
+                if (paragraph.startsWith('![') && paragraph.endsWith(')')) {
+                    const altStartIndex = paragraph.indexOf('[') + 1;
+                    const altEndIndex = paragraph.indexOf(']');
+                    const srcStartIndex = paragraph.indexOf('(') + 1;
+                    const srcEndIndex = paragraph.length - 1;
+
+                    const alt = paragraph.substring(altStartIndex, altEndIndex);
+                    const src = paragraph.substring(srcStartIndex, srcEndIndex);
+
                     return (
-                        <div key={index} className="my-8">
-                            <img
-                                src={src}
-                                alt={alt}
-                                className="w-full rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-800"
-                            />
-                            {alt && (
-                                <p className="text-sm text-center text-neutral-500 mt-2 italic">
-                                    {alt}
-                                </p>
-                            )}
-                        </div>
+                        <img
+                            key={index}
+                            src={src}
+                            alt={alt}
+                            className="w-full h-auto rounded-lg shadow-md my-6"
+                        />
                     );
                 }
 
