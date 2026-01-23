@@ -82,6 +82,8 @@ export const en = {
             research: 'Research',
             freelance: 'Freelance',
             project: 'Project',
+            'part-time': 'Part-time',
+            'full-time': 'Full-time',
         },
     },
 

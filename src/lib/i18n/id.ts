@@ -84,6 +84,8 @@ export const id: Translations = {
             research: 'Riset',
             freelance: 'Freelance',
             project: 'Proyek',
+            'part-time': 'Part-time',
+            'full-time': 'Full-time',
         },
     },
 

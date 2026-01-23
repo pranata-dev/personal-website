@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
-import { Briefcase, GraduationCap, FlaskConical, Rocket } from 'lucide-react';
+import { Briefcase, GraduationCap, FlaskConical, Rocket, Clock, Building2 } from 'lucide-react';
 import { useLocale } from '@/context/LocaleContext';
 
 interface Experience {
@@ -10,7 +10,7 @@ interface Experience {
     organization: string;
     period: string;
     description: string;
-    type: 'academic' | 'research' | 'freelance' | 'project';
+    type: 'academic' | 'research' | 'freelance' | 'project' | 'part-time' | 'full-time';
 }
 
 export default function ExperiencePage() {
@@ -22,14 +22,14 @@ export default function ExperiencePage() {
             organization: 'Department of Physics, IPB University',
             period: 'August 2025 - December 2025',
             description: 'Assisting students in sensor and transducer laboratory. Conducting experiments, analyzing data, and providing guidance on experimental design.',
-            type: 'freelance',
+            type: 'part-time',
         },
         {
             title: 'Analog Electronics Laboratory Assistant',
             organization: 'Department of Physics, IPB University',
             period: 'August 2024 - December 2024',
             description: 'Assisting students in analog electronics laboratory. Conducting experiments, analyzing data, and providing guidance on experimental design.',
-            type: 'freelance',
+            type: 'part-time',
         },
         {
             title: 'Physics Student',
@@ -45,6 +45,8 @@ export default function ExperiencePage() {
         research: FlaskConical,
         freelance: Briefcase,
         project: Rocket,
+        'part-time': Clock,
+        'full-time': Building2,
     };
 
     const typeColors = {
@@ -52,6 +54,8 @@ export default function ExperiencePage() {
         research: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400',
         freelance: 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400',
         project: 'bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400',
+        'part-time': 'bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400',
+        'full-time': 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400',
     };
 
     return (
