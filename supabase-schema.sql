@@ -61,6 +61,22 @@ CREATE POLICY "Public can read published posts" ON blog_posts
 CREATE POLICY "Public can submit contact" ON contact_submissions
   FOR INSERT WITH CHECK (true);
 
+-- Add views column (if not exists)
+ALTER TABLE blog_posts ADD COLUMN IF NOT EXISTS views INTEGER DEFAULT 0;
+
+-- RPC Function to increment view count
+CREATE OR REPLACE FUNCTION increment_view_count(slug_input TEXT)
+RETURNS VOID
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $$
+BEGIN
+  UPDATE blog_posts
+  SET views = views + 1
+  WHERE slug = slug_input;
+END;
+$$;
+
 -- Indexes
 CREATE INDEX IF NOT EXISTS idx_blog_posts_slug ON blog_posts(slug);
 CREATE INDEX IF NOT EXISTS idx_blog_posts_category ON blog_posts(category);
