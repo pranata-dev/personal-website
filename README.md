@@ -69,6 +69,6 @@ Features
 │   ├── components/     # React components (UI, Layouts, Features)
 │   ├── context/        # Global contexts (Locale, Theme)
 │   ├── lib/            # Utilities (Supabase client, i18n config)
-│   └── types/          # TypeScript definitions
+│   └── types/          # TypeScript definition
 ├── supabase-schema.sql # Database schema setup
 └── ...
