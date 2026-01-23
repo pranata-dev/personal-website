@@ -30,6 +30,7 @@ export interface BlogPost {
     excerpt: string | null;
     content: string | null;
     category: BlogCategory;
+    views: number;
     published: boolean;
     created_at: string;
     updated_at: string;

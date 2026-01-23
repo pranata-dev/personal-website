@@ -16,6 +16,7 @@ const samplePosts: BlogPost[] = [
         excerpt: 'Apakah lo termasuk orang-orang yang gemar menonton film-film sci-fi, dystopia, cyberpunk semacam The Matrix, Inception atau mungkin main game Cyberpunk 2077? Kalo iya, lo bakal suka dan terkesima dengan film anime yang satu ini, Akira.',
         content: '', // Content is loaded in [slug]/page.tsx
         category: 'reviews',
+        views: 0,
         published: true,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),

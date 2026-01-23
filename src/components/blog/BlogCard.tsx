@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Calendar, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, ArrowRight, Tag, Eye } from 'lucide-react';
 import { BlogPost, BlogCategory, BLOG_CATEGORIES } from '@/types';
 import { Card } from '@/components/ui/Card';
 import { useLocale } from '@/context/LocaleContext';
@@ -46,9 +46,15 @@ export function BlogCard({ post, index }: BlogCardProps) {
                                 <Tag className="w-3 h-3" />
                                 {categoryLabel}
                             </span>
-                            <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-500">
-                                <Calendar className="w-4 h-4" />
-                                <time dateTime={post.created_at}>{formattedDate}</time>
+                            <div className="flex items-center gap-3 text-sm text-neutral-500 dark:text-neutral-500">
+                                <div className="flex items-center gap-1">
+                                    <Eye className="w-3.5 h-3.5" />
+                                    <span>{post.views || 0}</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    <Calendar className="w-3.5 h-3.5" />
+                                    <time dateTime={post.created_at}>{formattedDate}</time>
+                                </div>
                             </div>
                         </div>
 

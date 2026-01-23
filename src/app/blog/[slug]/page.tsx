@@ -6,6 +6,11 @@ import { Calendar, ArrowLeft, Tag } from 'lucide-react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
+import { ViewCounter } from '@/components/blog/ViewCounter';
+import { Eye } from 'lucide-react';
+
+// Prevent caching for accurate view counts
+export const revalidate = 0;
 
 // Force dynamic rendering for Supabase data
 export const dynamic = 'force-dynamic';
@@ -55,6 +60,7 @@ Rating? Solid 9.5/10.
 
 **Tags:** Anime, Anime Review, Akira, Japanese Culture, Japan
 `,
+        views: 0,
         published: true,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
@@ -127,6 +133,7 @@ export default async function BlogPostPage({
 
     return (
         <div className="pt-24 pb-16">
+            <ViewCounter slug={slug} />
             <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Back link */}
                 <Link
@@ -139,7 +146,7 @@ export default async function BlogPostPage({
 
                 {/* Header */}
                 <header className="mb-12">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex flex-wrap items-center gap-4 mb-4">
                         <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-md text-sm font-medium ${categoryColors[post.category]}`}>
                             <Tag className="w-4 h-4" />
                             {categoryLabel}
@@ -147,6 +154,10 @@ export default async function BlogPostPage({
                         <div className="flex items-center gap-2 text-sm text-neutral-500">
                             <Calendar className="w-4 h-4" />
                             <time dateTime={post.created_at}>{formattedDate}</time>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-neutral-500">
+                            <Eye className="w-4 h-4" />
+                            <span>{post.views || 0} Views</span>
                         </div>
                     </div>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white">
