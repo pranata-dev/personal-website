@@ -77,6 +77,15 @@ export function Hero() {
                                 {t.hero.cta.contact}
                             </Button>
                         </Link>
+                        <a
+                            href="https://forms.gle/Eo6wiH7xxZmP8wvc9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button variant="secondary" size="lg">
+                                Register Tutor Class
+                            </Button>
+                        </a>
                     </motion.div>
 
                     {/* Scroll Indicator */}
