@@ -21,6 +21,7 @@ export const en = {
         cta: {
             projects: 'View Projects',
             contact: 'Get in Touch',
+            tutor: 'Register Belajar Bareng Nata',
         },
     },
 

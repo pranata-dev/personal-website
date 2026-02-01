@@ -23,6 +23,7 @@ export const id: Translations = {
         cta: {
             projects: 'Lihat Proyek',
             contact: 'Yuk Ngobrol',
+            tutor: 'Daftar Belajar Bareng Nata',
         },
     },
 

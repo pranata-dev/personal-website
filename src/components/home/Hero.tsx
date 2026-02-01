@@ -83,7 +83,7 @@ export function Hero() {
                             rel="noopener noreferrer"
                         >
                             <Button variant="secondary" size="lg">
-                                Register Tutor Class
+                                {t.hero.cta.tutor}
                             </Button>
                         </a>
                     </motion.div>
